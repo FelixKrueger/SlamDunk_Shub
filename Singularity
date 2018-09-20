@@ -15,14 +15,10 @@ Include: yum
   yum -y update
   yum -y install bzip2
   yum -y install python-pip
+  yum -y install tar
   pip --version
   
-  wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
-  bash ~/miniconda.sh -b -p $HOME/miniconda
-  export PATH="$HOME/miniconda/bin:$PATH"
-  source $HOME/miniconda/bin/activate
-  conda update conda
-  conda create --name myenv -c bioconda slamdunk
+  
   
 %runscript
   
