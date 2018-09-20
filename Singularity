@@ -13,8 +13,8 @@ Include: yum
   yum -y install wget
   yum -y install epel-release
   yum -y update
-  yum install bzip2
-  yum install python-pip
+  yum -y install bzip2
+  yum -y install python-pip
   pip --version
   
   wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda.sh
