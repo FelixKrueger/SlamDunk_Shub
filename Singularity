@@ -22,8 +22,7 @@ Include: yum
   bash $HOME/miniconda.sh -b -p $HOME/miniconda
   export PATH="$HOME/miniconda/bin:$PATH"
   conda update conda
-  conda create --name myenv -c bioconda slamdunk
- 
+
   
   
 %runscript
