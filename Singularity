@@ -4,7 +4,7 @@ MirrorURL: http://mirror.centos.org/centos-%{OSVERSION}/%{OSVERSION}/os/$basearc
 Include: yum
 
 %help
-  This is a test image we're building just to make sure we know how
+  This is a test message.
 
 %setup
 
@@ -12,12 +12,7 @@ Include: yum
     DESCRIPTION Singularity image containing all requirements for a SlamDunk installation
     VERSION 1.0
 
-%environment
-    PATH=/opt/conda/envs/SlamDunk/bin:$PATH
-    export PATH
-    
 %post
-  # Tobias Neumann <tobias.neumann.at@gmail.com>
   yum -y install wget
   yum -y install epel-release
   yum -y update
