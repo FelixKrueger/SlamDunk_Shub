@@ -23,8 +23,12 @@ Include: yum
   bash $HOME/miniconda.sh -b -p $HOME/miniconda
   export PATH="$HOME/miniconda/bin:$PATH"
   conda update conda
-
-  
+  # Bioconda (http://ddocent.com//bioconda/)
+  conda config --add channels r
+  conda config --add channels defaults
+  conda config --add channels conda-forge
+  conda config --add channels bioconda
+  conda create --name SlamDunk -c bioconda slamdunk
   
 %runscript
   
