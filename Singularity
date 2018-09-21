@@ -29,6 +29,7 @@ Include: yum
   conda config --add channels conda-forge
   conda config --add channels bioconda
   conda create --name SlamDunk -c bioconda slamdunk
+  conda activate SlamDunk
   
 %runscript
   
