@@ -9,8 +9,7 @@ Include: yum
 %setup
 
 %labels
-    MAINTAINER Phil Ewels <phil.ewels@scilifelab.se>
-    DESCRIPTION Singularity image containing all requirements for the nf-core/rnaseq pipeline
+    DESCRIPTION Singularity image containing all requirements for a SlamDunk installation
     VERSION 1.0
 
 %environment
@@ -38,6 +37,8 @@ Include: yum
   conda config --add channels conda-forge
   conda config --add channels bioconda
   conda create -y --name SlamDunk -c bioconda slamdunk
+  # installing (NextGenMap https://github.com/Cibiv/NextGenMap/wiki)
+  conda install -y nextgenmap
   
 %runscript
   
