@@ -20,7 +20,6 @@ Include: yum
   yum -y install python-pip
   yum -y install tar
   yum -y install which
-  yum -y install locate
   pip --version
   yum -y groupinstall "Development tools"
   wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O ~/miniconda.sh
