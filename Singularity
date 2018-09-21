@@ -7,7 +7,16 @@ Include: yum
   This is a test image we're building just to make sure we know how
 
 %setup
-   
+
+%labels
+    MAINTAINER Phil Ewels <phil.ewels@scilifelab.se>
+    DESCRIPTION Singularity image containing all requirements for the nf-core/rnaseq pipeline
+    VERSION 1.0
+
+%environment
+    PATH=/opt/conda/envs/SlamDunk/bin:$PATH
+    export PATH
+    
 %post
   # Tobias Neumann <tobias.neumann.at@gmail.com>
   yum -y install wget
@@ -28,8 +37,7 @@ Include: yum
   conda config --add channels defaults
   conda config --add channels conda-forge
   conda config --add channels bioconda
-  conda create --name SlamDunk -c bioconda slamdunk
-  conda activate SlamDunk
+  conda create -y --name SlamDunk -c bioconda slamdunk
   
 %runscript
   
