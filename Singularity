@@ -35,9 +35,9 @@ Include: yum
   conda config --add channels bioconda
   conda create -y --name SlamDunk -c bioconda slamdunk
   # installing (NextGenMap https://github.com/Cibiv/NextGenMap/wiki)
-  # conda install -y nextgenmap
+  conda install -y nextgenmap
   # Installing Bowtie2
-  conda install bowtie2=2.3.0
+  conda install -y bowtie2=2.3.0
   
   %environment
   #Set your toolname here and the appropriate version to have this in the metadata of your container
