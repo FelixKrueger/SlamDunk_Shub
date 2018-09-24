@@ -22,9 +22,9 @@ Include: yum
   yum -y install which
   pip --version
   yum -y groupinstall "Development tools"
-  wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O ~/miniconda.sh
-  bash $HOME/miniconda.sh -b -p $HOME/miniconda
-  export PATH="$HOME/miniconda/bin:$PATH"
+  wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O $SINGULARITY_ROOT/opt/miniconda.sh
+  bash $SINGULARITY_ROOT/opt/miniconda.sh -b -p $SINGULARITY_ROOT/opt/miniconda
+  export PATH="$SINGULARITY_ROOT/opt/miniconda/bin:$PATH"
   conda update conda
   # Bioconda (http://ddocent.com//bioconda/)
   conda config --add channels r
@@ -33,7 +33,7 @@ Include: yum
   conda config --add channels bioconda
   conda create -y --name SlamDunk -c bioconda slamdunk
   # installing (NextGenMap https://github.com/Cibiv/NextGenMap/wiki)
-  conda install -y nextgenmap
+  # conda install -y nextgenmap
   
 %runscript
   
