@@ -28,7 +28,7 @@ Include: yum
   bash $HOME/miniconda.sh -b -p $SINGULARITY_ROOT/opt/miniconda
   export PATH="$SINGULARITY_ROOT/opt/miniconda/bin:$PATH"
   $SINGULARITY_ROOT/opt/miniconda/bin/conda -o /usr/bin/conda
-  # conda update conda
+ 
   # Bioconda (http://ddocent.com//bioconda/)
   conda config --add channels r
   conda config --add channels defaults
@@ -37,6 +37,13 @@ Include: yum
   conda create -y --name SlamDunk -c bioconda slamdunk
   # installing (NextGenMap https://github.com/Cibiv/NextGenMap/wiki)
   # conda install -y nextgenmap
+  # Installing Bowtie2
+  conda install bowtie2=2.3.0
+  
+  %environment
+  #Set your toolname here and the appropriate version to have this in the metadata of your container
+    BOWTIE2=v2.3.0
+    PATH="/opt/miniconda/bin:$PATH"
   
 %runscript
   
