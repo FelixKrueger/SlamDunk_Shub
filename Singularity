@@ -27,7 +27,6 @@ Include: yum
   wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O $HOME/miniconda.sh
   bash $HOME/miniconda.sh -b -p $SINGULARITY_ROOT/opt/miniconda
   export PATH="$SINGULARITY_ROOT/opt/miniconda/bin:$PATH"
-  $SINGULARITY_ROOT/opt/miniconda/bin/conda -o /usr/bin/conda
  
   # Bioconda (http://ddocent.com//bioconda/)
   conda config --add channels r
