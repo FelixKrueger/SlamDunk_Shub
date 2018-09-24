@@ -22,10 +22,11 @@ Include: yum
   yum -y install which
   pip --version
   yum -y groupinstall "Development tools"
-  wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O $SINGULARITY_ROOT/opt/miniconda.sh
-  bash $SINGULARITY_ROOT/opt/miniconda.sh -b -p $SINGULARITY_ROOT/opt/miniconda
-  export PATH="$SINGULARITY_ROOT/opt/miniconda/bin:$PATH"
-  conda update conda
+  wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O $HOME/miniconda.sh
+  bash $HOME/miniconda.sh -b -p $SINGULARITY_ROOT/opt/miniconda
+  echo "conda activate" >> ~/.bashrc
+  # export PATH="$SINGULARITY_ROOT/opt/miniconda/bin:$PATH"
+  # conda update conda
   # Bioconda (http://ddocent.com//bioconda/)
   conda config --add channels r
   conda config --add channels defaults
