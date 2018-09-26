@@ -34,9 +34,9 @@ Include: yum
   conda config --add channels conda-forge
   conda config --add channels bioconda
   conda create -y --name SlamDunk -c bioconda slamdunk
-  # installing (NextGenMap https://github.com/Cibiv/NextGenMap/wiki)
-  # conda install -y nextgenmap
-
+  
+  # Installing Java
+  yum -y install java-1.8.0-openjdk
 
 %runscript
   
