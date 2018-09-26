@@ -36,7 +36,9 @@ Include: yum
   conda create -y --name SlamDunk -c bioconda slamdunk
   
   # Installing Java
-  yum -y install java-1.8.0-openjdk
-
+  cd ~
+  wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" "http://download.oracle.com/otn-pub/java/jdk/11+28/55eed80b163941c8885ad9298e6d786a/jdk-11_linux-x64_bin.rpm"
+  sudo yum -y localinstall jdk-11_linux-x64_bin.rpm
+  
 %runscript
   
