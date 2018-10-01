@@ -40,6 +40,7 @@ Include: yum
   conda create -y --name SlamDunk -c bioconda slamdunk
   
   # Installing Java
+  yum -y install java-1.8.0-openjdk
   
 %runscript
   
